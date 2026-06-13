@@ -5,113 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pixeld Headband - Sleep Analysis</title>
 <style>
-* {
-    box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
-}
-body {
-    margin: 0;
-    background: #0f172a;
-    color: white;
-}
-header {
-    padding: 25px;
-    text-align: center;
-    background: #111827;
-}
-header h1 {
-    margin: 0;
-    font-size: 32px;
-}
-header p {
-    color: #94a3b8;
-}
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-}
-.card {
-    background: #1e293b;
-    border-radius: 18px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 15px;
-}
-.stat {
-    background: #334155;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-}
-.stat h2 {
-    margin: 5px;
-    color: #38bdf8;
-}
-.timeline {
-    display:flex;
-    height:50px;
-    border-radius:10px;
-    overflow:hidden;
-    margin-top:15px;
-}
-.phase {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:12px;
-    font-weight:bold;
-}
-.awake {
-    background:#ef4444;
-    width:10%;
-}
-.light {
-    background:#60a5fa;
-    width:40%;
-}
-.deep {
-    background:#6366f1;
-    width:25%;
-}
-.rem {
-    background:#a855f7;
-    width:25%;
-}
-.bar {
-    height:20px;
-    background:#334155;
-    border-radius:20px;
-    overflow:hidden;
-}
-.fill {
-    height:100%;
-    background:#22c55e;
-    width:87%;
-}
-button {
-    background:#38bdf8;
-    border:none;
-    padding:12px 20px;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight:bold;
-}
-button:hover {
-    background:#0ea5e9;
-}
-.small {
-    color:#94a3b8;
-}
-footer {
-    text-align:center;
-    padding:20px;
-    color:#64748b;
-}
+*{box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
+body{margin:0;background:#0f172a;color:white}
+header{padding:25px;text-align:center;background:#111827}
+header h1{margin:0;font-size:32px}
+header p{color:#94a3b8}
+.container{max-width:1000px;margin:auto;padding:20px}
+.card,.learn-card{background:#1e293b;border-radius:18px;padding:20px;margin-bottom:20px}
+.grid,.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.stat{background:#334155;padding:20px;border-radius:15px;text-align:center}
+.stat h2{margin:5px;color:#38bdf8}
+.timeline{display:flex;height:50px;border-radius:10px;overflow:hidden;margin-top:15px}
+.phase{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold}
+.awake{background:#ef4444;width:10%}
+.light{background:#60a5fa;width:40%}
+.deep{background:#6366f1;width:25%}
+.rem{background:#a855f7;width:25%}
+.bar{height:20px;background:#334155;border-radius:20px;overflow:hidden}
+.fill{height:100%;background:#22c55e;width:87%}
+button{background:#38bdf8;border:none;padding:12px 20px;border-radius:10px;cursor:pointer;font-weight:bold}
+button:hover{background:#0ea5e9}
+.small{color:#94a3b8}
+.learn-card{background:linear-gradient(135deg,#1e293b,#172554)}
+.learn-item{background:#334155;padding:18px;border-radius:15px}
+.learn-item h3{color:#38bdf8;margin-top:0}
+.learn-item p{color:#cbd5e1;line-height:1.5}
+.tip{margin-top:20px;padding:15px;background:#0f766e;border-radius:12px}
+footer{text-align:center;padding:20px;color:#6473a8}
 </style>
 </head>
 <body>
@@ -123,123 +43,95 @@ footer {
 <div class="card">
 <h2>Last Night Sleep Summary</h2>
 <div class="grid">
-<div class="stat">
-<p>Sleep Duration</p>
-<h2 id="duration">7h 42m</h2>
-</div>
-<div class="stat">
-<p>Sleep Quality</p>
-<h2 id="quality">87%</h2>
-</div>
-<div class="stat">
-<p>Average Pulse</p>
-<h2 id="pulse">58 BPM</h2>
-</div>
-<div class="stat">
-<p>Average SpO₂</p>
-<h2 id="spo2">97%</h2>
-</div>
+<div class="stat"><p>Sleep Duration</p><h2 id="duration">7h 42m</h2></div>
+<div class="stat"><p>Sleep Quality</p><h2 id="quality">87%</h2></div>
+<div class="stat"><p>Average Pulse</p><h2 id="pulse">58 BPM</h2></div>
+<div class="stat"><p>Average SpO₂</p><h2 id="spo2">97%</h2></div>
 </div>
 </div>
 <div class="card">
 <h2>Sleep Phases</h2>
-<p class="small">
-Detected from movements + blood oxygen and pulse rate changes
-</p>
+<p class="small">Detected from movements + blood oxygen and pulse rate changes</p>
 <div class="timeline">
-<div class="phase awake">
-Awake
-</div>
-<div class="phase light">
-Light
-</div>
-<div class="phase deep">
-Deep
-</div>
-<div class="phase rem">
-REM
-</div>
+<div class="phase awake">Awake</div>
+<div class="phase light">Light</div>
+<div class="phase deep">Deep</div>
+<div class="phase rem">REM</div>
 </div>
 <br>
 <div class="grid">
-<div class="stat">
-<p>Awake</p>
-<h2>34 min</h2>
-</div>
-<div class="stat">
-<p>Light Sleep</p>
-<h2>3h 12m</h2>
-</div>
-<div class="stat">
-<p>Deep Sleep</p>
-<h2>1h 56m</h2>
-</div>
-<div class="stat">
-<p>REM Sleep</p>
-<h2>2h 00m</h2>
-</div>
+<div class="stat"><p>Awake</p><h2>34 min</h2></div>
+<div class="stat"><p>Light Sleep</p><h2>3h 12m</h2></div>
+<div class="stat"><p>Deep Sleep</p><h2>1h 56m</h2></div>
+<div class="stat"><p>REM Sleep</p><h2>2h 00m</h2></div>
 </div>
 </div>
 <div class="card">
 <h2>IMU Movement Analysis</h2>
-<p>
-Total night movement:
-<strong id="movement">
-124 movements
-</strong>
-</p>
-<div class="bar">
-<div class="fill" id="movementBar"></div>
-</div>
-<p class="small">
-Lower movement usually indicates better sleep stability.
-</p>
+<p>Total night movement: <strong id="movement">124 movements</strong></p>
+<div class="bar"><div class="fill" id="movementBar"></div></div>
+<p class="small">Lower movement usually indicates better sleep stability.</p>
 </div>
 <div class="card">
 <h2>Sensor Data</h2>
-<p>
-IMU acceleration:
-<span id="imu">0.04 g</span>
-</p>
-<p>
-Pulse:
-<span id="livePulse">58 BPM</span>
-</p>
-<p>
-SpO₂:
-<span id="liveSpo2">97%</span>
-</p>
+<p>IMU acceleration: <span id="imu">0.04 g</span></p>
+<p>Pulse: <span id="livePulse">58 BPM</span></p>
+<p>SpO₂: <span id="liveSpo2">97%</span></p>
 <button onclick="simulate()">Simulate New Night</button>
+</div>
+<div class="learn-card">
+<h2>🧠 Why Sleep Matters</h2>
+<p class="small">Understanding how sleep affects your body and mental health</p>
+<div class="learn-grid">
+<div class="learn-item">
+<h3>😌 Emotional Balance</h3>
+<p>During quality sleep, the brain processes emotions and experiences from the day. Good sleep can improve mood, reduce irritability, and support emotional stability.</p>
+</div>
+<div class="learn-item">
+<h3>🧩 Memory & Learning</h3>
+<p>Deep and REM sleep help organize information, strengthen memories, and improve concentration and problem-solving abilities.</p>
+</div>
+<div class="learn-item">
+<h3>⚡ Energy & Performance</h3>
+<p>A healthy sleep cycle restores physical energy, supports reaction speed, and helps maintain focus during the day.</p>
+</div>
+<div class="learn-item">
+<h3>🌿 Mental Health</h3>
+<p>Consistent sleep supports stress management. Poor sleep quality can affect mood regulation and emotional wellbeing.</p>
+</div>
+<div class="learn-item">
+<h3>❤️ Brain Recovery</h3>
+<p>During sleep, the brain performs maintenance processes and restores important neural connections.</p>
+</div>
+<div class="learn-item">
+<h3>🌙 Sleep Quality</h3>
+<p>A balanced amount of deep, light, and REM sleep is important for effective recovery.</p>
+</div>
+</div>
+<div class="tip">
+<strong>💡 Pixeld Headband Insight:</strong><br><br>
+Your IMU movement, pulse rate, and SpO₂ data can help identify sleep patterns connected to recovery, energy, and wellbeing.
+</div>
 </div>
 </div>
 <footer>
 Pixeld Headband © 2026 - Sleep Monitoring App
 </footer>
 <script>
-function random(min,max){
-    return Math.floor(Math.random()*(max-min+1))+min;
-}
+function random(min,max){return Math.floor(Math.random()*(max-min+1))+min}
 function simulate(){
-    let pulse=random(52,68);
-    let oxygen=random(95,99);
-    let movements=random(60,180);
-    let quality=random(70,96);
-    document.getElementById("pulse").innerHTML =
-        pulse+" BPM";
-    document.getElementById("spo2").innerHTML =
-        oxygen+"%";
-    document.getElementById("livePulse").innerHTML =
-        pulse+" BPM";
-    document.getElementById("liveSpo2").innerHTML =
-        oxygen+"%";
-    document.getElementById("movement").innerHTML =
-        movements+" movements";
-    document.getElementById("quality").innerHTML =
-        quality+"%";
-    document.getElementById("imu").innerHTML =
-        (Math.random()*0.2).toFixed(2)+" g";
-    document.getElementById("movementBar").style.width =
-        (100 - movements/3)+"%";
+let pulse=random(52,68);
+let oxygen=random(95,99);
+let movements=random(60,180);
+let quality=random(70,96);
+document.getElementById("pulse").innerHTML=pulse+" BPM";
+document.getElementById("spo2").innerHTML=oxygen+"%";
+document.getElementById("livePulse").innerHTML=pulse+" BPM";
+document.getElementById("liveSpo2").innerHTML=oxygen+"%";
+document.getElementById("movement").innerHTML=movements+" movements";
+document.getElementById("quality").innerHTML=quality+"%";
+document.getElementById("imu").innerHTML=(Math.random()*0.2).toFixed(2)+" g";
+document.getElementById("movementBar").style.width=(100-movements/3)+"%";
 }
 </script>
 </body>
