@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixeld Headband - Sleep Analysis</title>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+body {
+    margin: 0;
+    background: #0f172a;
+    color: white;
+}
+header {
+    padding: 25px;
+    text-align: center;
+    background: #111827;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+header p {
+    color: #94a3b8;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+.card {
+    background: #1e293b;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 15px;
+}
+.stat {
+    background: #334155;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+.stat h2 {
+    margin: 5px;
+    color: #38bdf8;
+}
+.timeline {
+    display:flex;
+    height:50px;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:15px;
+}
+.phase {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:bold;
+}
+.awake {
+    background:#ef4444;
+    width:10%;
+}
+.light {
+    background:#60a5fa;
+    width:40%;
+}
+.deep {
+    background:#6366f1;
+    width:25%;
+}
+.rem {
+    background:#a855f7;
+    width:25%;
+}
+.bar {
+    height:20px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+}
+.fill {
+    height:100%;
+    background:#22c55e;
+    width:87%;
+}
+button {
+    background:#38bdf8;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+button:hover {
+    background:#0ea5e9;
+}
+.small {
+    color:#94a3b8;
+}
+footer {
+    text-align:center;
+    padding:20px;
+    color:#64748b;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>🌙 Pixeld Headband</h1>
+<p>AI Sleep Analysis System based on IMU + SpO₂ + Pulse Sensors</p>
+</header>
+<div class="container">
+<div class="card">
+<h2>Last Night Sleep Summary</h2>
+<div class="grid">
+<div class="stat">
+<p>Sleep Duration</p>
+<h2 id="duration">7h 42m</h2>
+</div>
+<div class="stat">
+<p>Sleep Quality</p>
+<h2 id="quality">87%</h2>
+</div>
+<div class="stat">
+<p>Average Pulse</p>
+<h2 id="pulse">58 BPM</h2>
+</div>
+<div class="stat">
+<p>Average SpO₂</p>
+<h2 id="spo2">97%</h2>
+</div>
+</div>
+</div>
+<div class="card">
+<h2>Sleep Phases</h2>
+<p class="small">
+Detected from brain activity simulation + movement + oxygen changes
+</p>
+<div class="timeline">
+<div class="phase awake">
+Awake
+</div>
+<div class="phase light">
+Light
+</div>
+<div class="phase deep">
+Deep
+</div>
+<div class="phase rem">
+REM
+</div>
+</div>
+<br>
+<div class="grid">
+<div class="stat">
+<p>Awake</p>
+<h2>34 min</h2>
+</div>
+<div class="stat">
+<p>Light Sleep</p>
+<h2>3h 12m</h2>
+</div>
+<div class="stat">
+<p>Deep Sleep</p>
+<h2>1h 56m</h2>
+</div>
+<div class="stat">
+<p>REM Sleep</p>
+<h2>2h 00m</h2>
+</div>
+</div>
+</div>
+<div class="card">
+<h2>IMU Movement Analysis</h2>
+<p>
+Total night movement:
+<strong id="movement">
+124 movements
+</strong>
+</p>
+<div class="bar">
+<div class="fill" id="movementBar"></div>
+</div>
+<p class="small">
+Lower movement usually indicates better sleep stability.
+</p>
+</div>
+<div class="card">
+<h2>Sensor Data Simulation</h2>
+<p>
+IMU acceleration:
+<span id="imu">0.04 g</span>
+</p>
+<p>
+Pulse:
+<span id="livePulse">58 BPM</span>
+</p>
+<p>
+SpO₂:
+<span id="liveSpo2">97%</span>
+</p>
+<button onclick="simulate()">Simulate New Night</button>
+</div>
+</div>
+<footer>
+Pixeld Headband © 2026 - Experimental Sleep Monitoring Concept
+</footer>
+<script>
+function random(min,max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+}
+function simulate(){
+    let pulse=random(52,68);
+    let oxygen=random(95,99);
+    let movements=random(60,180);
+    let quality=random(70,96);
+    document.getElementById("pulse").innerHTML =
+        pulse+" BPM";
+    document.getElementById("spo2").innerHTML =
+        oxygen+"%";
+    document.getElementById("livePulse").innerHTML =
+        pulse+" BPM";
+    document.getElementById("liveSpo2").innerHTML =
+        oxygen+"%";
+    document.getElementById("movement").innerHTML =
+        movements+" movements";
+    document.getElementById("quality").innerHTML =
+        quality+"%";
+    document.getElementById("imu").innerHTML =
+        (Math.random()*0.2).toFixed(2)+" g";
+    document.getElementById("movementBar").style.width =
+        (100 - movements/3)+"%";
+}
+</script>
+</body>
+</html>
