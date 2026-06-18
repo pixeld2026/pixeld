@@ -6,112 +6,247 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pixeld - SleepArt</title>
+<title>Pixeld | Create Something</title>
+
 
 <style>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0b0f;
-    color: white;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #111118;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #333;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-}
-
-nav a:hover {
-    color: #00bfff;
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 
-section {
-    padding: 90px 10%;
-    min-height: 80vh;
-}
+body{
 
+    margin:0;
 
-h1 {
-    font-size: 55px;
-    color: #00bfff;
-}
+    font-family:Arial, Helvetica, sans-serif;
 
-h2 {
-    color: #00bfff;
-}
+    background:#0b0b12;
 
-
-p {
-    line-height: 1.7;
-    color: #cccccc;
-}
-
-
-.cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-
-.card {
-
-    background: #171720;
-    padding: 20px;
-    border-radius: 10px;
-    width: 280px;
-    border: 1px solid #333;
+    color:white;
 
 }
 
+nav{
 
-.card h3 {
-    color: #00bfff;
-}
+    position:fixed;
 
+    top:20px;
 
-footer {
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+
+    max-width:700px;
+
+    background:#151520;
+
+    border:1px solid #333;
+
+    border-radius:15px;
+
+    padding:12px;
 
     text-align:center;
-    padding:30px;
-    background:#08080c;
+
+    z-index:100;
 
 }
 
 
-footer a {
+nav a{
+
+    color:#ddd;
+
+    text-decoration:none;
+
+    margin:0 18px;
+
+    font-size:15px;
+
+}
+
+
+nav a:hover{
+
     color:#00bfff;
+
 }
 
+section{
+
+    padding:100px 10% 40px;
+
+}
+
+
+#home{
+
+    padding-top:130px;
+
+}
+
+
+
+h1{
+
+    font-size:55px;
+
+    margin:0;
+
+    color:#00bfff;
+
+}
+
+
+h2{
+
+    color:#00bfff;
+
+    margin-top:25px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+p{
+
+    color:#cccccc;
+
+    line-height:1.6;
+
+    margin-top:8px;
+
+}
+
+.members{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.card{
+
+    background:#15151e;
+
+    border:1px solid #292938;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    width:300px;
+
+}
+
+
+
+.card h3{
+
+    color:#00bfff;
+
+    margin-top:0;
+
+}
+
+footer{
+
+    margin-top:20px;
+
+    background:#050509;
+
+    border-top:1px solid #333;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+
+
+.instagram{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:10px 22px;
+
+    border-radius:20px;
+
+    background:#151520;
+
+    border:1px solid #00bfff;
+
+    color:#00bfff;
+
+    text-decoration:none;
+
+}
+
+
+
+.instagram:hover{
+
+    background:#00bfff;
+
+    color:#000;
+
+}
+
+@media(max-width:700px){
+
+    nav a{
+
+        margin:0 7px;
+
+        font-size:13px;
+
+    }
+
+
+    h1{
+
+        font-size:40px;
+
+    }
+
+}
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
+
 <nav>
 
 <a href="#home">Home</a>
+
 <a href="#members">Members</a>
+
 <a href="#innovation">Innovation</a>
 
 </nav>
+
 
 
 
@@ -125,6 +260,7 @@ footer a {
 
 <h2>Welcome</h2>
 
+
 <p>
 
 Welcome everyone!
@@ -136,13 +272,11 @@ Currently, we are competing in the WRO Future Innovators category.
 
 <h2>Our Mission</h2>
 
+
 <p>
 
-Our goal is to create solutions that are not only innovative,
+Our goal is to create technological solutions that are not only innovative,
 but also have a positive social impact and make people's lives easier.
-
-Our current project focuses on supporting a specific social group
-and creating a meaningful technological solution.
 
 </p>
 
@@ -150,21 +284,16 @@ and creating a meaningful technological solution.
 
 <h2>Our Values</h2>
 
+
 <p>
 
-For us, the result is not the only important thing.
-The journey, teamwork, and the people we work with are also valuable.
-
-Being part of a great team helps us improve our knowledge,
-creativity, and social skills.
+For us, teamwork and the journey are just as important as the final result.
+Working together helps us improve our knowledge, creativity and skills.
 
 </p>
 
 
 </section>
-
-
-
 
 
 <section id="members">
@@ -173,7 +302,7 @@ creativity, and social skills.
 <h2>Team Members</h2>
 
 
-<div class="cards">
+<div class="members">
 
 
 <div class="card">
@@ -185,12 +314,14 @@ creativity, and social skills.
 She competed in WRO with the Manómentes team.
 In 2024, they reached the international Future Innovators competition in Italy.
 
-She is the navigator of our team.
+<br><br>
+
+She is the navigator of the team.
 
 <br><br>
 
-Motto:
-"Today I am only 10 minutes late."
+"Motto:
+Today I am only 10 minutes late."
 
 </p>
 
@@ -203,19 +334,20 @@ Motto:
 
 <h3>Szobrász Hanna</h3>
 
+
 <p>
 
 She competed in FLL with the Blokkolók team.
-In 2023, she participated in an international competition in Morocco,
-and in 2024 she travelled to Houston for the world competition.
-
-She is the "chill guy" of our team.
+She participated in international competitions in Morocco and Houston.
 
 <br><br>
 
-Motto:
-"Don't worry guys, everything is fine while you see me."
-(That's when we start worrying.)
+She is the "chill guy" of the team.
+
+<br><br>
+
+"Motto:
+Don't worry guys, everything is fine while you see me."
 
 </p>
 
@@ -224,23 +356,24 @@ Motto:
 
 
 
-
 <div class="card">
 
 <h3>Kaptás Márk</h3>
 
+
 <p>
 
 He competed in FLL with the Jász-Stones team.
-In 2024, he participated in APOC in Sydney, Australia,
-and in 2025 he reached AOC in South Africa.
-
-He is the nerd of the team.
+He participated in international competitions in Sydney and South Africa.
 
 <br><br>
 
-Motto:
-"I don't go anywhere without my laptop."
+He is the technology person of the team.
+
+<br><br>
+
+"Motto:
+I don't go anywhere without my laptop."
 
 </p>
 
@@ -265,28 +398,31 @@ Motto:
 
 <p>
 
-
-Among the WRO topics, we connected most with
+The WRO topic that inspired us the most was
 "People, Robots and AI".
 
-After a long search, we created our final idea:
+After many ideas, we created our final project:
 SleepArt.
 
 
 <br><br>
 
 
-SleepArt is an interactive visual robot that uses biosensor fusion
-technology to monitor biological conditions during sleep.
-
-The collected data is transformed into a unique visual artwork
-using mathematical models and algorithms.
+SleepArt is an interactive robot that monitors biological conditions
+during sleep using biosensor fusion technology.
 
 
 <br><br>
 
 
-Instead of showing only statistics and graphs,
+The collected data is transformed into a unique visual artwork
+using algorithms and mathematical models.
+
+
+<br><br>
+
+
+Instead of only showing numbers and graphs,
 SleepArt turns human biological processes into art.
 
 
@@ -294,30 +430,14 @@ SleepArt turns human biological processes into art.
 
 
 Our goal is to raise awareness about sleep and mental health.
-Sleep problems and stress affect millions of people around the world.
+We want to connect technology, creativity and human wellbeing.
 
 
 <br><br>
 
 
-We wanted to create more than just a health device.
-We wanted to create an emotional experience that connects technology,
-art, and human wellbeing.
-
-
-<br><br>
-
-
-SleepArt also represents equality:
-anyone can create their own artwork without needing artistic skills.
-
-
-<br><br>
-
-
-For us, SleepArt is not only a robotics project.
-It is an experiment to combine technology, creativity,
-and human health into something meaningful.
+SleepArt shows that everyone can create something unique,
+even without artistic experience.
 
 
 </p>
@@ -331,17 +451,20 @@ and human health into something meaningful.
 <footer>
 
 
-<p>Follow us:</p>
+<p>Follow our project</p>
 
 
-<a href="https://www.instagram.com/sleepart_wro/" target="_blank">
+<a class="instagram"
+href="https://www.instagram.com/sleepart_wro/"
+target="_blank">
 
-Instagram: @sleepart_wro
+Instagram • SleepArt WRO
 
 </a>
 
 
 </footer>
+
 
 
 
