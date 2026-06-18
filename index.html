@@ -1,473 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pixeld | Create Something</title>
-
-
 <style>
-
 *{
     box-sizing:border-box;
     scroll-behavior:smooth;
 }
-
-
 body{
-
     margin:0;
-
     font-family:Arial, Helvetica, sans-serif;
-
-    background:#0b0b12;
-
+    background:#090910;
     color:white;
-
 }
-
 nav{
-
     position:fixed;
-
     top:20px;
-
     left:50%;
-
     transform:translateX(-50%);
-
     width:90%;
-
-    max-width:700px;
-
-    background:#151520;
-
-    border:1px solid #333;
-
-    border-radius:15px;
-
-    padding:12px;
-
+    max-width:750px;
+    background:#141421;
+    border:1px solid #303040;
+    border-radius:18px;
+    padding:13px;
     text-align:center;
-
     z-index:100;
-
 }
-
-
 nav a{
-
-    color:#ddd;
-
+    color:#dddddd;
     text-decoration:none;
-
-    margin:0 18px;
-
+    margin:0 15px;
     font-size:15px;
-
 }
-
-
 nav a:hover{
-
-    color:#00bfff;
-
+    color:#4f62d8;
 }
-
 section{
-
-    padding:100px 10% 40px;
-
+    padding:95px 10% 35px;
 }
-
-
 #home{
-
-    padding-top:130px;
-
+    padding-top:125px;
 }
-
-
-
 h1{
-
-    font-size:55px;
-
+    font-size:60px;
+    color:#4f62d8;
     margin:0;
-
-    color:#00bfff;
-
 }
-
-
+.slogan{
+    font-size:34px;
+    font-weight:bold;
+    color:white;
+    margin-top:5px;
+    margin-bottom:35px;
+}
 h2{
-
-    color:#00bfff;
-
-    margin-top:25px;
-
-    margin-bottom:10px;
-
+    color:#4f62d8;
+    margin-top:30px;
+    margin-bottom:12px;
 }
-
-
-
 p{
-
     color:#cccccc;
-
-    line-height:1.6;
-
-    margin-top:8px;
-
+    line-height:1.65;
+    font-size:17px;
 }
-
+.project-image{
+    width:100%;
+    max-width:750px;
+    display:block;
+    margin:0 auto 25px;
+    border-radius:15px;
+    border:1px solid #303040;
+}
 .members{
-
     display:flex;
-
-    gap:15px;
-
     flex-wrap:wrap;
-
+    gap:20px;
 }
-
-
-
 .card{
-
-    background:#15151e;
-
-    border:1px solid #292938;
-
+    background:#141421;
+    border:1px solid #303040;
     border-radius:12px;
-
     padding:20px;
-
     width:300px;
-
 }
-
-
-
 .card h3{
-
-    color:#00bfff;
-
+    color:#4f62d8;
     margin-top:0;
-
 }
-
 footer{
-
-    margin-top:20px;
-
-    background:#050509;
-
-    border-top:1px solid #333;
-
-    padding:35px;
-
+    margin-top:30px;
+    padding:45px 20px;
     text-align:center;
-
+    background:#050508;
+    border-top:2px solid #303040;
 }
-
-
-
 .instagram{
-
     display:inline-block;
-
     margin-top:10px;
-
-    padding:10px 22px;
-
-    border-radius:20px;
-
-    background:#151520;
-
-    border:1px solid #00bfff;
-
-    color:#00bfff;
-
+    padding:12px 25px;
+    border-radius:25px;
+    background:#141421;
+    border:1px solid #4f62d8;
+    color:white;
     text-decoration:none;
-
 }
-
-
-
 .instagram:hover{
-
-    background:#00bfff;
-
-    color:#000;
-
+    background:#4f62d8;
 }
-
 @media(max-width:700px){
-
-    nav a{
-
-        margin:0 7px;
-
-        font-size:13px;
-
-    }
-
-
-    h1{
-
-        font-size:40px;
-
-    }
-
+nav a{
+    margin:0 6px;
+    font-size:13px;
 }
-
+h1{
+    font-size:42px;
+}
+.slogan{
+    font-size:25px;
+}
+section{
+    padding-left:6%;
+    padding-right:6%;
+}
+}
 </style>
-
-
 </head>
-
-
-
 <body>
-
-
-
 <nav>
-
 <a href="#home">Home</a>
-
 <a href="#members">Members</a>
-
 <a href="#innovation">Innovation</a>
-
+<a href="#contact">Contact</a>
 </nav>
-
-
-
-
 <section id="home">
-
-
 <h1>Pixeld</h1>
-
-<h2>"Create Something!"</h2>
-
-
+<div class="slogan">
+"Create Something!"
+</div>
 <h2>Welcome</h2>
-
-
 <p>
-
 Welcome everyone!
 We are the Pixeld team, a small group of innovative and creative young people.
 Currently, we are competing in the WRO Future Innovators category.
-
 </p>
-
-
 <h2>Our Mission</h2>
-
-
 <p>
-
 Our goal is to create technological solutions that are not only innovative,
 but also have a positive social impact and make people's lives easier.
-
 </p>
-
-
-
 <h2>Our Values</h2>
-
-
 <p>
-
-For us, teamwork and the journey are just as important as the final result.
-Working together helps us improve our knowledge, creativity and skills.
-
+For us, the result is important, but teamwork and the journey are just as valuable.
+Through cooperation, we improve our knowledge, creativity and social skills.
 </p>
-
-
 </section>
-
-
 <section id="members">
-
-
+<img class="project-image"
+src="4F62D8EC-671F-44A8-9616-704420809719.jpeg"
+alt="Pixeld Team">
 <h2>Team Members</h2>
-
-
 <div class="members">
-
-
 <div class="card">
-
 <h3>Kazár Hanna</h3>
-
 <p>
-
 She competed in WRO with the Manómentes team.
 In 2024, they reached the international Future Innovators competition in Italy.
-
 <br><br>
-
 She is the navigator of the team.
-
 <br><br>
-
-"Motto:
-Today I am only 10 minutes late."
-
+Motto:
+"Today I am only 10 minutes late."
 </p>
-
 </div>
-
-
-
-
 <div class="card">
-
 <h3>Szobrász Hanna</h3>
-
-
 <p>
-
 She competed in FLL with the Blokkolók team.
 She participated in international competitions in Morocco and Houston.
-
 <br><br>
-
 She is the "chill guy" of the team.
-
 <br><br>
-
-"Motto:
-Don't worry guys, everything is fine while you see me."
-
+Motto:
+"Don't worry guys, everything is fine while you see me."
 </p>
-
 </div>
-
-
-
-
 <div class="card">
-
 <h3>Kaptás Márk</h3>
-
-
 <p>
-
 He competed in FLL with the Jász-Stones team.
 He participated in international competitions in Sydney and South Africa.
-
 <br><br>
-
 He is the technology person of the team.
-
 <br><br>
-
-"Motto:
-I don't go anywhere without my laptop."
-
+Motto:
+"I don't go anywhere without my laptop."
 </p>
-
 </div>
-
-
 </div>
-
-
 </section>
-
-
-
-
-
-
 <section id="innovation">
-
-
+<img class="project-image"
+src="sleepart flow portrait.svg"
+alt="SleepArt Flow">
 <h2>Innovation - SleepArt</h2>
-
-
 <p>
-
 The WRO topic that inspired us the most was
 "People, Robots and AI".
-
 After many ideas, we created our final project:
 SleepArt.
-
-
 <br><br>
-
-
-SleepArt is an interactive robot that monitors biological conditions
+SleepArt is an interactive visual robot that monitors biological conditions
 during sleep using biosensor fusion technology.
-
-
 <br><br>
-
-
 The collected data is transformed into a unique visual artwork
-using algorithms and mathematical models.
-
-
+using mathematical models and algorithms.
 <br><br>
-
-
-Instead of only showing numbers and graphs,
+Instead of only showing statistics and graphs,
 SleepArt turns human biological processes into art.
-
-
 <br><br>
-
-
 Our goal is to raise awareness about sleep and mental health.
 We want to connect technology, creativity and human wellbeing.
-
-
 <br><br>
-
-
 SleepArt shows that everyone can create something unique,
-even without artistic experience.
-
-
+without needing artistic experience.
 </p>
-
-
 </section>
-
-
-
-
-<footer>
-
-
-<p>Follow our project</p>
-
-
+<footer id="contact">
+<h2>Contact</h2>
+<p>
+Follow our project and see our progress:
+</p>
 <a class="instagram"
 href="https://www.instagram.com/sleepart_wro/"
 target="_blank">
-
-Instagram • SleepArt WRO
-
+Instagram • @sleepart_wro
 </a>
-
-
 </footer>
-
-
-
-
 </body>
-
 </html>
